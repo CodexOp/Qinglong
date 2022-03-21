@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Qing Long Inu</title>
+	<meta name="description" content="">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"></script>
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.html">
+	<link rel="icon" href="img/dragon.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+	<!-- Load google font
+	================================================== -->
+	<script type="text/javascript">
+		WebFontConfig = {
+			google: { families: [ 'Catamaran:300,400,600,700', 'Raleway:100,700', 'Roboto:700'] }
+		};
+		(function() {
+			var wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + 
+			'://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+		})();
+	</script>
+
+	<!-- Load other scripts
+	================================================== -->
+	<script type="text/javascript">
+		var _html = document.documentElement;
+		_html.className = _html.className.replace("no-js","js");
+	</script>
+
+<style>.preloader{width: 100%;height: 100%;position: fixed;background-color: #fff;z-index: 9999;}</style>
+
+</head>
+
+<body>
+
+	<div class="preloader"></div>
+
+	<header class="header">
+		<a href="#" class="logo">
+			<div class="logo__img"></div>
+			<div class="logo__title">Qing Long Inu</div>
+		</a>
+
+		<ul class="menu">
+	
+
+			<li class="menu__item">
+				<a href="#mint" class="menu__link">Mint</a>
+			</li>
+
+			<li class="menu__item">
+				<a href="#abouts" class="menu__link">About</a>
+			</li>
+
+			<li class="menu__item">
+				<a href="#whitepaper" class="menu__link">Whitepaper</a>
+			</li>
+			<li class="menu__item">
+				<a href="#why" class="menu__link">Why QingLong</a>
+			</li>
+			<li class="menu__item">
+				<a href="#token" class="menu__link">Token</a>
+			</li>
+
+			<li class="menu__item">
+				<a href="#team" class="menu__link">Team</a>
+			</li>
+		
+			<li class="">
+				<a href="#" class="menu__link connect_wallet" onclick="connectMeta()">Connect</a>
+			</li>
+		</ul>
+
+
+
+		<div class="btn-menu">
+			<div class="one"></div>
+			<div class="two"></div>
+			<div class="three"></div>
+		</div>
+	</header>
+
+	<div class="fixed-menu">
+		<div class="fixed-menu__header">
+			<a href="#" class="logo logo--color">
+				<div class="logo__img"></div>
+				<div class="logo__title">Qinglong Inu</div>
+			</a>
+
+			<div class="btn-close">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 47.971 47.971" style="enable-background:new 0 0 47.971 47.971;" xml:space="preserve" width="512px" height="512px">
+						<path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88   c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242   C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879   s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z" fill="#006DF0"/></svg>
+			</div>
+		</div>
+
+		<div class="fixed-menu__content">
+
+			<ul class="mob-menu">
+		
+	
+				<li class="mob-menu__item">
+					<a href="#mint" class="mob-menu__link">Mint</a>
+				</li>
+
+				<li class="mob-menu__item">
+					<a href="#abouts" class="mob-menu__link">About</a>
+				</li>
+
+				<li class="mob-menu__item">
+					<a href="#whitepaper" class="mob-menu__link">Whitepaper</a>
+				</li>
+				<li class="mob-menu__item">
+					<a href="#why" class="mob-menu__link">Why QingLong</a>
+				</li>
+				<li class="mob-menu__item">
+					<a href="#token" class="mob-menu__link">Token</a>
+				</li>
+				<li class="mob-menu__item">
+					<a href="#team" class="mob-menu__link">Team</a>
+				</li>
+
+				<li class="mobilewallet">
+					<a href="#" class="connect_wallet" onclick="connectMeta()">Connect</a>
+				</li>
+			</ul>
+			
+
+		</div>
+	</div>
+
+	<div class="wrapper">
+
+
+		<section class="promo" id="home">
+			<div class="container content_landingpage">
+				<div class="row align-items-center ">
+					<div class="col landing_content">
+						<div class="promo__content" data-aos="fade-up">
+							<!-- <div class="promo__subtitle">Qing Long Inu</div> -->
+							<h1 class="title title--big title--white promo__title">
+								Qing Long Inu
+								<!-- <span>With Very Small HardCap</span> -->
+							</h1>
+							<p>
+								Qing Long Inu is a Chinese based coin launched by a bullish dev well known in the BSC space . Presale will be super low cap with huge marketing plans lined up.
+							</p>
+
+							<form action="#" id="subscribe-top" class="form join-us">
+								<button class="form__btn join-us__btn"><a href="https://t.me/QingLongInu">Telegram</a></button>
+								<button class="form__btn join-us__btn ico_button"><a href="https://www.pinksale.finance/#/launchpad/0xDe58e2B962E51B5ad7C8E279609ae0A9b727f74A?chain=BSC">Pinksale</a></button>
+							</form>
+
+						</div>
+						<div class="dragon_container">
+							<img src="img/dragon.png" data-aos="fade-left"  alt="" class="promo__img">
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+	
+
+		<section id="about" class="about section section--no-pt ">
+			
+			<div class="container" id="mint">
+				<div>
+				<div class="row about__first-row nftsection">
+					<div class="col-lg-5" data-aos="fade-right">
+						<div class="block-header">
+							<div class="subtitle subtitle--tire">Mint NFT</div>
+							<h2 class="title title--black title--medium">Qing Long Inu NFT</h2>
+						<br>
+
+						<p>
+							Qing Long Inu NFTs will work in a lottery system which will be explained below and can be listed on NFTrend for sale after it is minted. All the funds raised in the NFT sale will 100% be used for post launch marketing and buybacks
+						</p>
+
+						<ul class="about__list-marker">
+							<li>
+								Each NFT will be minted at random and there are a total of 50 NFTs and 5 rarities that can be minted
+							</li>
+							<li>
+								Immortal NFT holders will receive 750 Qing Long Inu tokens and their wallet will be whitelisted for the presale
+							</li>
+							<li>
+								Mythic NFT holders will receive 500 Qing Long Inu tokens and their wallet will be whitelisted for the presale
+							</li>
+							<li>
+								Legendary NFT holders will receive 500 Qing Long Inu tokens							
+							</li>
+							<li>
+								Rare NFT holders will receive 250 Qing Long Inu tokens							
+							</li>
+							<li>
+								Common NFT holders will receive 100 Qing Long Inu tokens						
+							</li>
+						</ul>
+					</div>
+					</div>		
+					<div class="common_div"> 
+					<img src="img/common.gif" class="common"  alt="">
+					</div>
+				
+				</div>
+
+		
+
+				<div class="mintnow">
+
+					<div class=""><h2 class="heading_mint">Qing Long Inu NFTs can be minted for .5BNB </h2></div>
+					<p>Qing Long Inu NFTs will be minted at random and you have an equal chance of receiving a Immortal, Mythic, Legendary, Rare and Common NFT.</p>
+					<div class="nftcount">
+						<div onclick="decrement()" class="remove"><i  class="fa-solid fa-minus"></i></div>
+						<div class="" id="counting"></div>
+						<div  onclick="increment()" class="add"><i class="fa-solid fa-plus"></i></div>
+					</div>
+					<div id="bnbamount" ><span>Total Cost - 0.5 BNB</span> <span id="totalamount"></span> </div>
+					<button class="btn btn--medium" onclick="mintNow()"> Mint Now</button>
+					<div class="totalminted">0/50 Minted</div>
+				</div>
+				</div>
+				
+				<div class="row about__second-row nftsection" id="abouts">
+					<div class="col-lg-6 offset-lg-6" data-aos="fade-left">
+						<div class="block-header">
+							<div class="subtitle subtitle--tire">Who We Are?</div>
+							<h2 class="title title--black title--medium"> 		About Qing long INU							</h2>
+						</div>
+
+						<p>
+							Qing Long Inu is a Chinese based coin launched by a bullish dev well known in the BSC space @ekenthetrex. Presale will be super low cap with huge marketing plans lined up. 
+						</p>
+
+						<ul class="about__list-check">
+							<li>
+								Backed by the biggest <span>Influencers in BSC</span>
+							</li>
+							<li>
+								 Listings and trending on huge <span>Chinese tracking websites</span> 
+							</li>
+							<li>
+								Active community with <span>Daily VC</span> 
+							</li>
+						</ul>
+					</div>
+					<img src="img/about-img-2.png" class="about__img-2" alt="">
+
+				</div>
+			</div>
+		</section>
+
+		
+
+		
+		<section  class="process section">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="block-header block-header--animated block-header--center">
+							<div  class="subtitle">Process</div>
+							<h2 class="title title--medium title--white">How to buy</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="process__steps">
+							<div class="process__step" data-aos="fade-left">
+								<div class="process__step-icon">
+									<img src="img/fox.png" class="howitwork_image" alt="">
+								</div>
+								<h3 class="process__step-title">
+									Download Metamask
+								</h3>
+							</div>
+
+							<div class="process__step" data-aos="fade-left" data-aos-delay="200">
+								<div class="process__step-icon">
+									<img src="img/wallet.png"  class="howitwork_image" alt="">
+								</div>
+								<h3 class="process__step-title">
+									Deposit BNB into your wallet								</h3>
+							</div>
+
+							<div class="process__step" data-aos="fade-left" data-aos-delay="400">
+								<div class="process__step-icon">
+									<img src="img/pancake.png"  class="howitwork_image" alt="">
+								</div>
+								<h3 class="process__step-title">
+									Go To PancakeSwap
+								</h3>
+							</div>
+							<div class="process__step" data-aos="fade-left" data-aos-delay="600">
+								<div class="process__step-icon">
+									<img src="img/swap.png"  class="howitwork_image" alt="">
+								</div>
+								<h3 class="process__step-title">
+									Swap your BNB for Qing Long Inu
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="whitepaper" class="stat section" >
+			<div class="container">
+				<div class="row stat__first-row">
+					<div class="col-lg-5" data-aos="fade-right">
+						<div class="block-header block-header--animated">
+							<div class="subtitle subtitle--tire">Information</div>
+							<h2 class="title title--black title--medium">Whitepaper</h2>
+						</div>
+
+						<div class="stat__content">
+
+							<p>
+								Here is the whitepaper, you can see our plans and know more about the project
+							</p>
+
+							<button class="btn whitepaper_button">Whitepaper</button>
+
+						</div>	
+						<br> <br>
+						<h2 class="title title--black title--medium">Contract Address</h2>
+						<br>
+						<a href="https://bscscan.com/address/0x4D07b27c09E01d97f58DEDddfE2809fC82c8Aebf"><input class="contract_address" placeholder="" value="0x4D07b27c09E01d97f58DEDddfE2809fC82c8Aebf" readonly /></a>
+
+					</div>
+
+					<img src="img/pngwing.com.png" class="stat__graphic" alt="">
+				</div>
+			
+			</div>
+		</section>
+
+		
+
+	
+
+		<section class="app section" id="why">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-md-8" data-aos="fade-right" >
+						<div class="block-header block-header--animated">
+							<div class="subtitle subtitle--tire">Project And Ecosystem</div>
+							<h2 class="title title--black title--medium">
+								Why Qinglong inu
+
+							</h2>
+						</div>
+
+						<p>
+💎Hard cap of only 40 BNB <br/>
+🚀Backed by the biggest influencers in BSC<br/>
+🎯Huge listings applied for once launched<br/>
+🀄️ Listings and trending on huge chinese tracking websites<br/>
+📈Previous project did >10x in a bear market<br/>
+👥Active community with daily VC<br/>
+❌No jeetfluencer marketing<br/>
+						</p>
+
+		
+					</div>
+					<img src="img/pngfind.png" data-aos="fade-left" data-aos-offset="-200" data-aos-delay="400" alt="" class="app__iphone">
+				</div>
+			</div>
+		</section>
+
+		<section id="token" class="token section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 offset-lg-6" data-aos="fade-left" >
+						<div class="block-header block-header--animated">
+							<div class="subtitle subtitle--tire">About token</div>
+							<h2 class="title title--medium title--black">Token Sale</h2>
+						</div>
+
+						<ul class="token__info-list">
+							<li>
+								<span>Name:</span> Qing Long Inu
+							</li>
+							<li>
+								<span>Type:</span> BSC Token
+							</li>
+							<li>
+								<span>Symbol:</span> QingLong
+							</li>
+							<li>
+								<span>Total Nfts :</span> 50
+							</li>
+							<li>
+								<span>Presale:</span> 14th March 2022
+							</li>
+							<li>
+								<span>SoftCap:</span> 39 BNB
+							</li>
+							<li>
+								<span>HardCap:</span> 40 BNB
+							</li>
+						</ul>
+
+						<div class="token__desc">
+							<div class="token__desc-title">General description</div>
+							<div class="token__desc-text">
+								<p>
+									All the funds raised in the NFT sale will 100% be used for post launch marketing and buybacks
+								</p>
+								<p>
+									There are a total of only 50 Qing Long Inu NFTs and they can be minted for .5BNB each
+								</p>
+							</div>
+						</div>
+
+						<a href="#" class="btn btn--medium">Buy Token</a>
+						<a href="https://www.pinksale.finance/#/launchpad/0xDe58e2B962E51B5ad7C8E279609ae0A9b727f74A?chain=BSC" class="btn btn--medium">Presale</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		
+	
+
+		<section id="team" class="team section">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div data-aos="fade-up" class="block-header block-header--animated">
+							<div class="subtitle subtitle--tire">Our brain</div>
+							<h2 class="title title--medium title--white">Awesome Team</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row team__list">
+					<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6" data-aos="fade-up">
+						<a href="https://t.me/ekenthetrex" class="team-member fb">
+							<div class="team-member__avatar">
+								<img src="img/eken.jpg" alt="" class="team-member__avatar-img">
+							</div>
+							<div class="team-member__name">
+								ekenthetrex
+														</div>
+							<div class="team-member__post">
+								Developer
+							</div>
+						</a>
+					</div>
+					
+						</a>
+					</div>
+			</div>
+		</section>
+
+		
+
+		
+		
+		<section class="subscribe section">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="block-header block-header--animated block-header--center">
+				
+							<h2 class="title title--medium">Join Our Socials</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				</div>
+				<div class="row">
+					<div class="col">
+					
+						<ul class="social-list" ">
+							<li class="social-list__item">
+								
+								<a href="https://twitter.com/QingLongInu	" class="social-list__link">
+									<i class="fa-brands fa-twitter"></i>
+								</a>
+							</li>
+							<li class="social-list__item">
+								<a href="https://www.facebook.com/QingLongInuOfficial/" class="social-list__link">
+									<i class=" fa-brands fa-facebook"></i>
+								</a>
+							</li>
+							<li class="social-list__item">
+								<a href="https://t.me/QingLongInu" class="social-list__link">
+									<i class="fa-brands fa-telegram"></i>
+								</a>
+							</li>
+							<li class="social-list__item">
+								<a href="https://discord.gg/XNR9SRjX" class="social-list__link">
+									<i class="fa-brands fa-discord"></i>								
+								</a>
+							</li>
+							<li class="social-list__item">
+								<a href="https://www.reddit.com/r/QingLongInu/" class="social-list__link">
+									<i class="fa-brands fa-reddit-alien"></i>								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="./ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="js/jquery-2.2.4.min.html"><\/script>')</script>
+	
+	<script src="js/scripts.min.js"></script>
+
+</body>
+
+<!-- Mirrored from demo.artureanec.com/html/cryptoland/demo_3/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Mar 2022 16:15:35 GMT -->
+</html>
